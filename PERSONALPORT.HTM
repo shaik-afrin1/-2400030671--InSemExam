@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaik Afrin | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo"></h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm <span>Shaik Afrin</span> 👋</h2>
+      <p>Front-End Developer passionate about crafting stunning and responsive websites.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <div class="hero-img">
+      <img src="profile.png" alt="Profile Image">
+    </div>
+  </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a dedicated web developer who loves transforming ideas into interactive, visually appealing, and functional web experiences. I specialize in HTML, CSS, and JavaScript, and focus on clean code and intuitive design.
+    </p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </section>
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="3.jpg" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio showcasing skills, work, and creativity.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="1.jpg" alt="Weather App">
+        <h3>Weather App</h3>
+        <p>Live weather updates using OpenWeather API and beautiful UI.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="2.jpg" alt="Task Manager">
+        <h3>Task Manager</h3>
+        <p>Organize your tasks efficiently with a simple and clean design.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s connect! Feel free to reach out via this form.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    <p>© 2025 Shaik Afrin | Crafted with 💜</p>
+  </footer>
+
+  <script>
+  const infoMap = {
+    "View My Work": "Here are some of my amazing projects and works.",
+    "Get in Touch": "Feel free to contact me through the form below.",
+    "View Project": "Here is detailed information about this project."
+  };
+
+  document.querySelectorAll('.btn').forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+      event.preventDefault();
+      const buttonText = btn.textContent.trim();
+      const info = infoMap[buttonText] || "Information not available.";
+      // Display the information on the page instead of alert
+      const infoBox = document.getElementById('info-box');
+      if (infoBox) {
+        infoBox.textContent = info;
+        infoBox.style.display = 'block';
+      } else {
+        // Create info box if it doesn't exist
+        const newInfoBox = document.createElement('div');
+        newInfoBox.id = 'info-box';
+        newInfoBox.style.padding = '1rem';
+        newInfoBox.style.margin = '1rem 0';
+        newInfoBox.style.border = '2px solid #6a1b9a';
+        newInfoBox.style.backgroundColor = '#f3e5f5';
+        newInfoBox.style.color = '#4a148c';
+        newInfoBox.style.borderRadius = '8px';
+        newInfoBox.textContent = info;
+        btn.parentElement.appendChild(newInfoBox);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

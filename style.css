@@ -1,0 +1,241 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f3e5f5, #ede7f6);
+  color: #333;
+  overflow-x: hidden;
+}
+/* Navbar */
+header {
+  background: linear-gradient(90deg, #6a1b9a, #8e24aa);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10%;
+  background: linear-gradient(135deg, #8e24aa, #ab47bc);
+  color: white;
+  text-align: left;
+}
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-text span {
+  color: #ffeb3b;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.hero .btn {
+  background: #ffeb3b;
+  color: #6a1b9a;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.hero .btn:hover {
+  background: #fff;
+  color: #8e24aa;
+}
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-img img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+  position: relative;
+}
+/* About */
+.about {
+  padding: 3rem 10%;
+  text-align: center;
+  background: #f3e5f5;
+}
+.about h2 {
+  font-size: 2rem;
+  color: #6a1b9a;
+  margin-bottom: 1rem;
+}
+.about p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #444;
+}
+.about .btn {
+  background: #6a1b9a;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.about .btn:hover {
+  background: #ab47bc;
+}
+/* Projects */
+.projects {
+  background: #ede7f6;
+  padding: 3rem 10%;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2rem;
+  color: #4a148c;
+  margin-bottom: 2rem;
+}
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.project-card {
+  background: white;
+  border-radius: 20px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card h3 {
+  color: #6a1b9a;
+  margin: 1rem 0 0.5rem;
+}
+.project-card p {
+  padding: 0 1rem 1rem;
+  color: #555;
+}
+.project-card .btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  background: #8e24aa;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.project-card .btn:hover {
+  background: #ab47bc;
+}
+/* Contact */
+.contact {
+  background: #f3e5f5;
+  padding: 3rem 10%;
+  text-align: center;
+}
+.contact h2 {
+  color: #4a148c;
+  margin-bottom: 1rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: #6a1b9a;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: #ab47bc;
+}
+/* Footer */
+footer {
+  background: #4a148c;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
